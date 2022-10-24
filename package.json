@@ -1,0 +1,32 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "bash": "bash ./deploy.sh",
+    "build:deployJs": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
+    "scp": "scp -r dist/* root@49.235.79.10:/www/admin/webnote.dolam.top_80/wwwroot",
+    "preview": "vite preview --port 9090"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "compressing": "^1.5.1",
+    "cross-env": "^7.0.3",
+    "directory-tree": "^3.0.0",
+    "ora": "^5.3.0",
+    "scp2": "^0.5.0",
+    "vite": "^2.9.15",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
+    "vuepress-theme-reco": "^1.6.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/sjan233/web-note.git"
+  }
+}

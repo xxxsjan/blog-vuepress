@@ -1,0 +1,6 @@
+[alias]
+  ad = add .
+  st = status
+  cmm = commit -m
+  co = cheackout
+  cob = cheackout -b
