@@ -14,6 +14,21 @@
     git config --global user.name "xxxsjan"
     git config --global user.email "626653354@qq.com"
     git config --list
+    // 移除配置
+    git conf ig --global --unset user.name
+    git conf ig --global --unset safe.directory D:/aa/bbb/cccc
+    // 编辑
+    git config --global --edit
+    :wq保存退出
+    :q退出
+    :q!强制退出
+
+  配置当前当前fork的仓库的原仓库地址
+git remote add upstream <原仓库github地址> 
+
+fork相关操作
+
+https://zhuanlan.zhihu.com/p/467670042
 
 ### 创建仓库
 
