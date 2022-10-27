@@ -20,9 +20,7 @@ function getWebnote(arr) {
         children: getWebnote(child.children),
       };
     } else {
-      return (
-        '/webnote' + child.path.split('docs/webnote')[1].replace('.md', '')
-      );
+      return '/webnote' + child.path.split('docs/webnote')[1].replace('.md', '');
     }
   });
   // console.log('res', res);

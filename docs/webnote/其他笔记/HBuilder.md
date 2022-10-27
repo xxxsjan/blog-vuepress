@@ -6,7 +6,7 @@
 
 右侧新增，做修改操作
 
-详情参考：https://ask.dcloud.net.cn/article/35776
+详情参考：<https://ask.dcloud.net.cn/article/35776>
 
 ```
 "workbench.colorCustomizations": {
@@ -24,4 +24,3 @@
        }
   }
 ```
-
