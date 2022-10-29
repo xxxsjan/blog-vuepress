@@ -9,7 +9,8 @@
     "bash": "bash ./deploy.sh",
     "build:js": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
     "scp": "scp -r dist/* root@11.11.11.11:/www/admin/webnote.dolam.top_80/wwwroot",
-    "preview": "vite preview --port 9090"
+    "preview": "vite preview --port 9090",
+    "docker": "npm run build && docker build -t web-note ."
   },
   "keywords": [],
   "author": "",
