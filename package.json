@@ -7,7 +7,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "bash": "bash ./deploy.sh",
-    "build:deployJs": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
+    "build:js": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
     "scp": "scp -r dist/* root@11.11.11.11:/www/admin/webnote.dolam.top_80/wwwroot",
     "preview": "vite preview --port 9090"
   },

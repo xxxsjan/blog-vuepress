@@ -5,7 +5,7 @@ const config = {
   // 如果你要部署在 https://<USERNAME>.github.io/<REPO>/ 上，例如你的仓库地址为 https://github.com/<USERNAME>/<REPO>，那么请设置 base 为 '/<REPO>/'。
   // 适用gitee, 就gitee上的项目名，部自己服务器'/'就行
   base: '/', // 本地看
-  // base: "/web-note/", // 部署gitee的web-note仓库名
+  // base: '/web-note/', // 部署gitee的web-note仓库名
   title: 'web-note',
   description: 'Hello!',
   head: [['link', { rel: 'icon', href: `/favicon.ico` }]],

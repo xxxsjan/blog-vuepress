@@ -1,6 +1,6 @@
 module.exports = [
   { text: '首页', link: '/' },
-  { text: '笔记', link: '/pages/' },
+  { text: '笔记', link: '/webnote/' },
   {
     text: '语言',
     items: [

@@ -15,7 +15,7 @@ const defaultCfg = {
         collapsable: false,
         children: ['/guide/'],
       },
-      ...sidebar,
+      // ...sidebar,
     ],
   },
 };
@@ -27,12 +27,12 @@ const recoCfg = {
     nav: require('./nav'), // 头部菜单
     sidebar: {
       // HTML
-      '/page/basicKnowledge/html/': [
-        {
-          title: 'html基础',
-          children: ['/page/basicKnowledge/html/'],
-        },
-      ],
+      // '/page/basicKnowledge/html/': [
+      //   {
+      //     title: 'html基础',
+      //     children: ['/page/basicKnowledge/html/'],
+      //   },
+      // ],
     },
 
     sidebarDepth: 2, // 同时提取markdown中h2 和 h3 标题，显示在侧边栏上
