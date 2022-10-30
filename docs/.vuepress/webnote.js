@@ -5,35 +5,40 @@ const tree = dirTree(path.resolve(__dirname, '../webnote'), {
   extensions: /\.md$/,
   normalizePath: true,
 });
-
-function getWebnote(arr) {
-  if (!Array.isArray(arr)) return [];
-  let res = arr.map((child) => {
-    // console.log('child', child);
-    if (child.children && child.children.length > 0) {
-      return {
-        // text: child.name,
-        // children: getChild(child.children),
-        // sidebarDepth: 2,
-        title: child.name,
-        collapsable: true, // 默认值是 true,可折叠
-        children: getWebnote(child.children),
-      };
-    } else {
-      return '/webnote' + child.path.split('docs/webnote')[1].replace('.md', '');
-    }
-  });
-  // console.log('res', res);
-  return res;
-}
-
 // 输出格式参考
-let arr = [
-  {
-    title: 'webnote',
-    collapsable: true, // 默认值是 true,可折叠
-    children: ['/webnote/后端/数据库'],
-  },
-];
-
-module.exports = getWebnote(tree.children);
+// 你可以省略 .md 拓展名，同时以 / 结尾的路径将会被视为 README.md
+let aaa = {
+  title: 'webnote',
+  collapsable: false, // 默认值是 true,可折叠
+  children: [
+    '/webnote/web',
+    {
+      title: 'dir',
+      collapsable: false,
+      children: ['/webnote/dir/test'],
+    },
+  ],
+};
+function genSidebar(data, name, path = '/') {
+  path = path + name + '/';
+  const files = data.children.filter((item) => !item.children && item.name !== 'README.md');
+  const dirs = data.children.filter((item) => item.children);
+  const childrenMd = files.map((item) => {
+    return `${path}${item.name.split('.')[0]}`;
+  });
+  const dirsMd = dirs.map((dir) => {
+    return {
+      title: dir.name,
+      collapsable: false,
+      children: genSidebar(dir, dir.name, path),
+    };
+  });
+  return [...childrenMd, ...dirsMd];
+}
+const result = {
+  title: 'webnote',
+  collapsable: false,
+  children: genSidebar(tree, 'webnote'),
+};
+// console.log(result);
+module.exports = result;
