@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vuepress dev docs",
+    "dev": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "bash": "bash ./deploy.sh",
     "build:js": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
     "scp": "scp -r dist/* root@11.11.11.11:/www/admin/webnote.dolam.top_80/wwwroot",
-    "preview": "vite preview --port 9090",
+    "preview": "vite preview --port 9090 --open",
     "docker": "npm run build && docker build -t web-note-image .&& docker run -d -p 3000:80 --name web-note web-note-image&&echo http://localhost:3000"
   },
   "keywords": [],
@@ -23,11 +23,11 @@
     "scp2": "^0.5.0",
     "vite": "^2.9.15",
     "vuepress": "^1.8.2",
-    "vuepress-plugin-autobar": "github:boboidream/vuepress-bar",
-    "vuepress-theme-reco": "^1.6.11"
+    "vuepress-plugin-autobar": "^0.1.7",
+    "vuepress-theme-reco": "^1.3.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/sjan233/web-note.git"
+    "url": "https://gitee.com/xxxsjan/web-note.git"
   }
 }

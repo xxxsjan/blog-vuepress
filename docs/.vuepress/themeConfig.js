@@ -1,5 +1,3 @@
-const webnoteSidebar = require('./webnote');
-console.log(JSON.stringify(webnoteSidebar));
 const defaultCfg = {
   // 主题配置
   themeConfig: {
@@ -15,7 +13,7 @@ const defaultCfg = {
         collapsable: false,
         children: ['/guide/'],
       },
-      webnoteSidebar,
+      require('./webnote'),
     ],
   },
 };
