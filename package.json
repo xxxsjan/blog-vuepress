@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs",
+    "build:deploy": "cross-env VUE_APP_CURRENTMODE=deploy vuepress build docs",
     "bash": "bash ./deploy.sh",
     "build:js": "npm run build && cross-env VUE_APP_CURRENTMODE=prod node ./deploy",
     "scp": "scp -r dist/* root@11.11.11.11:/www/admin/webnote.dolam.top_80/wwwroot",

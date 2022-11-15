@@ -1,8 +1,9 @@
 const themeConfig = require('./themeConfig');
 const themeReco = require('./theme-reco.js');
 const config = {
-  base: '/', // 本地看 vite or liveServer  // 根标签有data-server-rendered="true"，要移除了才可以正常渲染
+  // base: '/', // 本地看 vite or liveServer  // 根标签有data-server-rendered="true"，要移除了才可以正常渲染
   // base: '/web-note/', // 部署git
+  base: process.env.VUE_APP_CURRENTMODE === 'deploy' ? '/web-note/' : '/',
   title: '个人博客',
   description: 'Hello!',
   head: [
