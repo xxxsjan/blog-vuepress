@@ -1,6 +1,7 @@
 name: Build and Deploy
 on: [push]
 # https://vuepress.vuejs.org/zh/guide/deploy.html#github-pages
+# https://github.com/jenkey2011/vuepress-deploy/
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
