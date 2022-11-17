@@ -1,7 +1,7 @@
 {
-  "name": "web-node-vuepress",
+  "name": "blog-vuepress",
   "version": "1.0.0",
-  "description": "",
+  "description": "vuepress 博客",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs --temp .temp",
