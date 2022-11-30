@@ -4,6 +4,10 @@
 
 vuepress
 
+## 预览
+
+ <https://xxxsjan.github.io/blog-vuepress/>
+
 ## 部署
 
 ### js部署
