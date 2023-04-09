@@ -1,15 +1,14 @@
-const themeConfig = require('./themeConfig');
-const themeReco = require('./theme-reco.js');
+const head =require('./config/head')
+// const themeConfig = require('./config/themeConfig');
+const themeReco = require('./config/theme-reco.js');
+
 const config = {
   // base: '/', // 本地看 vite or liveServer  // 根标签有data-server-rendered="true"，要移除了才可以正常渲染
-  // base: '/web-note/', // 部署git
+  // base: '/web-note/', // 部署github
   base: process.env.VUE_APP_CURRENTMODE === 'deploy' ? '/blog-vuepress/' : '/',
   title: '个人博客',
   description: 'Hello!',
-  head: [
-    ['link', { rel: 'icon', href: `/favicon.ico` }], // 编译为 <link rel="icon" href="/favicon.ico">
-    ['script', { src: '/custom.js' }],
-  ],
+  head,
   dest: './dist',
   evergreen: true,
   ...themeReco,
